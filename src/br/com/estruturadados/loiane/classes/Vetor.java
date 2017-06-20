@@ -1,5 +1,7 @@
 package br.com.estruturadados.loiane.classes;
 
+import java.util.Arrays;
+
 public class Vetor {
 	
 	private String[] elemento;
@@ -37,4 +39,30 @@ public class Vetor {
 		}
 		return false;
 	}
+	
+	public int getTamanho(){
+		return this.tamanho = tamanho;
+	}
+
+	@Override
+	public String toString() {
+		
+		StringBuilder s = new StringBuilder();
+		s.append(" [ ");
+		
+		for (int i = 0; i < this.tamanho-1; i++) {
+			s.append(elemento[i]);
+			s.append(", ");
+		}
+		
+		if (this.tamanho>0) {
+			s.append(elemento[this.tamanho-1]);
+		}
+		s.append("]");
+		
+		return s.toString();
+		//return Arrays.toString(elemento);
+	}
+	
+	
 }

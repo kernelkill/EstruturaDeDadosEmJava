@@ -7,13 +7,15 @@ public class AppV {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Vetor vetor = new Vetor(2);
+		Vetor vetor = new Vetor(10);
 		
 		
 			vetor.adiciona("elemento 1");
 			vetor.adiciona("elemento 2");
 			vetor.adiciona("elemento 3");
-			System.out.println("Foi adicionado elementos...");
+			System.out.printf("Foi adicionado " + vetor.getTamanho() + " elementos." );
+			System.out.println( );
+			System.out.println(vetor.toString());
 		
 	}
 
