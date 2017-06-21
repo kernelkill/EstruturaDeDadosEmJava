@@ -9,7 +9,6 @@ public class AppV {
 		
 		Vetor vetor = new Vetor(10);
 		
-		
 			vetor.adiciona("elemento 1");
 			vetor.adiciona("elemento 2");
 			vetor.adiciona("elemento 3");
