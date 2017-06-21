@@ -15,7 +15,7 @@ public class AppW {
 		System.out.printf("Foi adicionado " + vetor.getTamanho() + " elementos." );
 		System.out.println( );
 		System.out.println(vetor.toString());
-		System.out.println("Vc fez a busca pela posicão de " + vetor.busca(3));
+		//System.out.println("Vc fez a busca pela posicão de " + vetor.busca(3));
 
 	}
 
