@@ -62,6 +62,24 @@ public class Vetor {
 		return true;
 	}
 	
+	
+	//B G D E F  Posição a ser removido é 1 (G)
+	//0 1 2 3 4  Tamanho do vetor é 5
+	//vetor[1] = vetor[2];
+	//vetor[2] = vetor[3];
+	//vetor[3] = vetor[4];
+	public void remove(int posicao){
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posicao Invalida!");
+		}
+		
+		for (int i = posicao; i < tamanho-1; i++) {
+			this.elemento[i] = this.elemento[i+1];
+		}
+		this.tamanho--;
+		
+	}
+	
 	public void aumentaCapacidade(){
 		if (this.tamanho == elemento.length) {
 			String[] elementosNovos = new String[elemento.length * 2];
