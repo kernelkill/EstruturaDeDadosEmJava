@@ -1,16 +1,24 @@
 package br.com.estruturadados.loiane.classes;
 
-public class Lista {
+import java.lang.reflect.Array;
+
+public class Lista<T>{
 	
-	private Object[] elemento;
+	private T[] elemento;
 	private int tamanho;
 	
 	
 	public Lista(int capacidade){
-		this.elemento = new Object[capacidade];
+		this.elemento = (T[]) new Object[capacidade];
+		this.tamanho = 0;
 	}
 	
-	public boolean adiciona(Object elemento){
+	public Lista(int capacidade, Class<T> tipoClasse){
+		this.elemento = (T[]) Array.newInstance(tipoClasse, capacidade);
+		this.tamanho = 0;
+	}
+	
+	public boolean adiciona(T elemento){
 		
 		this.aumentaCapacidade();
 		
@@ -23,7 +31,7 @@ public class Lista {
 	}
 	
 	
-	public boolean adiciona(int posicao, Object elemento){
+	public boolean adiciona(int posicao, T elemento){
 		
 		this.aumentaCapacidade();
 		
@@ -61,7 +69,7 @@ public class Lista {
 	
 	public void aumentaCapacidade(){
 		if (this.tamanho == elemento.length) {
-			Object[] elementosNovos = new Object[elemento.length * 2];
+			T[] elementosNovos = (T[]) new Object[elemento.length * 2];
 			for (int i = 0; i < elemento.length; i++) {
 				elementosNovos[i] = elemento[i];
 			}
@@ -77,7 +85,7 @@ public class Lista {
 //		return this.elemento[posicao];
 //	}
 	
-	public int busca(Object elemento){
+	public int busca(T elemento){
 		for (int i = 0; i < this.tamanho; i++) {
 			if (this.elemento[i].equals(elemento)) {
 				return i;

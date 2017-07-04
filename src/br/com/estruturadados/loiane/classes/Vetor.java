@@ -1,7 +1,5 @@
 package br.com.estruturadados.loiane.classes;
 
-import java.util.Arrays;
-
 public class Vetor {
 	
 	private String[] elemento;
@@ -109,7 +107,7 @@ public class Vetor {
 	}
 	
 	public int getTamanho(){
-		return this.tamanho = tamanho;
+		return this.tamanho;
 	}
 
 	@Override
