@@ -8,11 +8,13 @@ public class Lista<T>{
 	private int tamanho;
 	
 	
+	@SuppressWarnings("unchecked")
 	public Lista(int capacidade){
 		this.elemento = (T[]) new Object[capacidade];
 		this.tamanho = 0;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public Lista(int capacidade, Class<T> tipoClasse){
 		this.elemento = (T[]) Array.newInstance(tipoClasse, capacidade);
 		this.tamanho = 0;
@@ -69,6 +71,7 @@ public class Lista<T>{
 	
 	public void aumentaCapacidade(){
 		if (this.tamanho == elemento.length) {
+			@SuppressWarnings("unchecked")
 			T[] elementosNovos = (T[]) new Object[elemento.length * 2];
 			for (int i = 0; i < elemento.length; i++) {
 				elementosNovos[i] = elemento[i];
