@@ -98,6 +98,17 @@ public class Lista<T>{
 		return -1;
 	}
 	
+	
+	//Implementando o exercicio 1
+	public boolean contem(T elemento){
+		
+		int pos = busca(elemento);
+		if (pos > -1) {
+			return true;
+		}
+		return false;
+	}
+	
 	public int getTamanho(){
 		return this.tamanho;
 	}
