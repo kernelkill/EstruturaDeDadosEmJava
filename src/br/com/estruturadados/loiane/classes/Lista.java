@@ -98,6 +98,18 @@ public class Lista<T>{
 		return -1;
 	}
 	
+	public int ultimoIndice(T elemento){
+		
+		//int ultimoIndice = -1;
+		
+		for (int i = this.tamanho-1; i >=0; i--) {
+			if (this.elemento[i].equals(elemento)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
 	
 	//Implementando o exercicio 1
 	public boolean contem(T elemento){
