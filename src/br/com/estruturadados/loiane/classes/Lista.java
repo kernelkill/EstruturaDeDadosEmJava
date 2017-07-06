@@ -65,8 +65,15 @@ public class Lista<T>{
 		for (int i = posicao; i < tamanho-1; i++) {
 			this.elemento[i] = this.elemento[i+1];
 		}
-		this.tamanho--;
+		this.tamanho--;	
+	}
+	
+	public void remove(T elemento){
 		
+		int pos = this.busca(elemento);
+		if (pos > -1) {
+			this.remove(pos);
+		}
 	}
 	
 	public void aumentaCapacidade(){
@@ -98,6 +105,7 @@ public class Lista<T>{
 		return -1;
 	}
 	
+	//Implementando exercicio de numero 2
 	public int ultimoIndice(T elemento){
 		
 		//int ultimoIndice = -1;
