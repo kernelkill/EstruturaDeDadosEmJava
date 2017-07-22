@@ -88,12 +88,16 @@ public class Lista<T>{
 		}
 	}
 	
-//	public String busca(int posicao){
-//		if (!(posicao >= 0 && posicao < tamanho)) {
-//			throw new IllegalArgumentException("Posicao Invalida!");
-//		}
-//		return this.elemento[posicao];
-//	}
+	public T contem(int posicao){
+		return busca(posicao);
+	}
+	
+	public T busca(int posicao){
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posicao Invalida!");
+		}
+		return this.elemento[posicao];
+	}
 	
 	public int busca(T elemento){
 		for (int i = 0; i < this.tamanho; i++) {
