@@ -23,9 +23,49 @@ public class Exer6 {
 		
 		while (opcao != 0) {
 			opcao = obterOpcaoMenu(scan);
+			
+			switch (opcao) {
+			case 1:
+				adicionarContatoFinal(scan, lista);
+				break;
+			case 2:
+				
+				break;
+
+			default:
+				break;
+			}
 		}
+		
+		System.out.println("Usuario digitou 0, programa terminado.");
 	}
 
+	
+	//Função entranda de dados
+	protected static void adicionarContatoFinal(Scanner scan, Lista<Contato> lista){
+		
+		System.out.println("Criando um contato, entre com as informaçoes: ");
+		String nome = leInformacao("Entre com um nome", scan);
+		String telefone = leInformacao("Entre com um telefone", scan);
+		String email = leInformacao("Entre com um email", scan);
+		
+		Contato contato = new Contato(nome, telefone, email);
+		
+		lista.adiciona(contato);
+		
+		System.out.println("Contato adicionado com Sucesso!");
+		
+	}
+	
+	protected static String leInformacao(String msg, Scanner scan){
+		
+		System.out.println(msg);
+		String entrada = scan.nextLine();
+		
+		return entrada;
+	}
+	
+	
 	protected static int obterOpcaoMenu(Scanner scan) {
 
 		boolean entradaValida = false;
