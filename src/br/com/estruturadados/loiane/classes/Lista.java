@@ -76,6 +76,21 @@ public class Lista<T>{
 		}
 	}
 	
+	public void limpar(){
+		//1ª Opcao
+		//this.elemento = (T[]) new Object[this.elemento.length];
+		
+		//2ª Opçao
+		//this.tamanho = 0;
+		
+		//3º opçao
+		for (int i = 0; i < this.tamanho; i++) {
+			this.elemento[i] = null;
+		}
+		this.tamanho = 0;
+	}
+	
+	
 	public void aumentaCapacidade(){
 		if (this.tamanho == elemento.length) {
 			@SuppressWarnings("unchecked")
